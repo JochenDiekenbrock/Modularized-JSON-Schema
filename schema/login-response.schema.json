@@ -1,11 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "additionalProperties": false,
-  "definitions": {
-    "components": {
-      "$ref": "response_base.schema.json/properties/components"
-    }
-  },
+  "definitions": {},
   "id": "schema/login-response.schema.json",
   "allOf": [
     {
@@ -26,6 +22,8 @@
       "type": "object"
     }
   },
-  "required": ["components"],
+  "required": [
+    "components"
+  ],
   "type": "object"
 }

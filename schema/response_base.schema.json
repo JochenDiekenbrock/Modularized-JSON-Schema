@@ -6,11 +6,9 @@
       "additionalProperties": false,
       "properties": {
         "code": {
-          "id": "/properties/messages/items/properties/code",
           "type": "string"
         },
         "text": {
-          "id": "/properties/messages/items/properties/text",
           "type": "string"
         }
       },
@@ -21,11 +19,9 @@
       "type": "object"
     }
   },
-  "id": "/schema/response-base.schema.json",
   "properties": {
     "messages": {
       "additionalItems": false,
-      "id": "/properties/messages",
       "items": {
         "$ref": "#/definitions/message"
       },
@@ -33,11 +29,9 @@
       "type": "array"
     },
     "requestid": {
-      "id": "/properties/requestid",
       "type": "string"
     },
     "sessionid": {
-      "id": "/properties/sessionid",
       "type": "string"
     }
   },
