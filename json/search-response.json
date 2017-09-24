@@ -1,0 +1,16 @@
+{
+  "sessionid": "123",
+  "requestid": "123-A3",
+  "messages": [
+    {
+      "code": "A1",
+      "text": "something"
+    }
+  ],
+  "components": {
+    "hits": [
+      "hit1",
+      "hit2"
+    ]
+  }
+}

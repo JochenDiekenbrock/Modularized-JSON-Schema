@@ -18,6 +18,21 @@
             </SchemaInfo>
           </value>
         </entry>
+        <entry key="search-response">
+          <value>
+            <SchemaInfo>
+              <option name="name" value="search-response" />
+              <option name="relativePathToSchema" value="schema/search-response.schema.json" />
+              <option name="patterns">
+                <list>
+                  <Item>
+                    <option name="path" value="json/search-response.json" />
+                  </Item>
+                </list>
+              </option>
+            </SchemaInfo>
+          </value>
+        </entry>
       </map>
     </state>
   </component>

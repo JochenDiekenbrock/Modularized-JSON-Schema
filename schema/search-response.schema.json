@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "additionalProperties": false,
+  "definitions": {},
+  "allOf": [
+    {
+      "$ref": "response_base.schema.json"
+    }
+  ],
+  "properties": {
+    "components": {
+      "additionalProperties": false,
+      "properties": {
+        "hits": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "hits"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "components"
+  ],
+  "type": "object"
+}
