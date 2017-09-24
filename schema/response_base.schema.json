@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "additionalProperties": false,
+  "definitions": {
+    "message": {
+      "additionalProperties": false,
+      "properties": {
+        "code": {
+          "id": "/properties/messages/items/properties/code",
+          "type": "string"
+        },
+        "text": {
+          "id": "/properties/messages/items/properties/text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "code",
+        "text"
+      ],
+      "type": "object"
+    }
+  },
+  "id": "/schema/response-base.schema.json",
+  "properties": {
+    "messages": {
+      "additionalItems": false,
+      "id": "/properties/messages",
+      "items": {
+        "$ref": "#/definitions/message"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "requestid": {
+      "id": "/properties/requestid",
+      "type": "string"
+    },
+    "sessionid": {
+      "id": "/properties/sessionid",
+      "type": "string"
+    }
+  },
+  "required": [
+    "sessionid",
+    "requestid"
+
+  ],
+  "type": "object"
+}
