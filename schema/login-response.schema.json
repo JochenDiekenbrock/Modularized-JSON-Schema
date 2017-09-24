@@ -1,30 +1,37 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "additionalProperties": false,
-  "definitions": {},
+  "definitions": {
+    "message": {
+      "additionalProperties": false,
+      "properties": {
+        "code": {
+          "id": "/properties/messages/items/properties/code",
+          "type": "string"
+        },
+        "text": {
+          "id": "/properties/messages/items/properties/text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "code",
+        "text"
+      ],
+      "type": "object"
+    }
+  },
   "id": "http://example.com/login-response.schema.json",
   "properties": {
+    "components": {
+      "id": "/properties/components",
+      "type": "object"
+    },
     "messages": {
       "additionalItems": false,
       "id": "/properties/messages",
       "items": {
-        "additionalProperties": false,
-        "id": "/properties/messages/items",
-        "properties": {
-          "code": {
-            "id": "/properties/messages/items/properties/code",
-            "type": "string"
-          },
-          "text": {
-            "id": "/properties/messages/items/properties/text",
-            "type": "string"
-          }
-        },
-        "required": [
-          "code",
-          "text"
-        ],
-        "type": "object"
+        "$ref": "#/definitions/message"
       },
       "minItems": 1,
       "type": "array"

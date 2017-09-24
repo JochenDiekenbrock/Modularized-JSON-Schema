@@ -6,5 +6,8 @@
       "code": "A1",
       "text": "something"
     }
-  ]
+  ],
+  "components": {
+    "someResponseSpecificInfo": "whatever"
+  }
 }
