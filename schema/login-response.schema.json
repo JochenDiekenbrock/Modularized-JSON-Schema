@@ -1,14 +1,22 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "additionalProperties": false,
-  "definitions": {},
   "id": "schema/login-response.schema.json",
-  "allOf": [
-    {
-      "$ref": "response_base.schema.json"
-    }
-  ],
-  "properties": {
+  "description": "Description, used as interface comment",
+  "title": "LoginResponse",
+  "additionalProperties": false,
+  "definitions": {
+    "additionalData": {
+      "additionalProperties": false,
+      "properties": {
+        "components": {
+          "$ref": "#/definitions/components"
+        }
+      },
+      "required": [
+        "components"
+      ],
+      "type": "object"
+    },
     "components": {
       "additionalProperties": false,
       "properties": {
@@ -22,8 +30,13 @@
       "type": "object"
     }
   },
-  "required": [
-    "components"
+  "allOf": [
+    {
+      "$ref": "schema/response_base.schema.json"
+    },
+    {
+      "$ref": "#/definitions/additionalData"
+    }
   ],
   "type": "object"
 }

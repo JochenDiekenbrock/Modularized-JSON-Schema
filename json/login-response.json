@@ -3,7 +3,7 @@
   "requestid": "123-A3",
   "messages": [
     {
-      "code": "A1",
+      "code": "E1001",
       "text": "something"
     }
   ],

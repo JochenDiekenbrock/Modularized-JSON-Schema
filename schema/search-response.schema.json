@@ -1,13 +1,21 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "schema/search-response.schema.json",
+  "title": "SearchResponse",
   "additionalProperties": false,
-  "definitions": {},
-  "allOf": [
-    {
-      "$ref": "response_base.schema.json"
-    }
-  ],
-  "properties": {
+  "definitions": {
+    "additionalData": {
+      "additionalProperties": false,
+      "properties": {
+        "components": {
+          "$ref": "#/definitions/components"
+        }
+      },
+      "required": [
+        "components"
+      ],
+      "type": "object"
+    },
     "components": {
       "additionalProperties": false,
       "properties": {
@@ -24,8 +32,13 @@
       "type": "object"
     }
   },
-  "required": [
-    "components"
+  "allOf": [
+    {
+      "$ref": "schema/response_base.schema.json"
+    },
+    {
+      "$ref": "#/definitions/additionalData"
+    }
   ],
   "type": "object"
 }

@@ -1,11 +1,14 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "schema/response_base.schema.json",
+  "title": "BaseResponse",
   "additionalProperties": false,
   "definitions": {
     "message": {
       "additionalProperties": false,
       "properties": {
         "code": {
+          "enum": ["E1000", "E1001", "E1002"],
           "type": "string"
         },
         "text": {

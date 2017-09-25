@@ -1,0 +1,28 @@
+{
+  "name": "modularized-json-schema",
+  "version": "1.0.0",
+  "description": "Example for modularizing a JSON schema and generating Typescript interface definitions",
+  "main": " ",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "json2ts ./schema/login-response.schema.json generated/LoginResponse.ts && json2ts ./schema/search-response.schema.json generated/SearchResponse.ts"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JochenDiekenbrock/Modularized-JSON-Schema.git"
+  },
+  "keywords": [
+    "JSON Schema",
+    "Typescript"
+  ],
+  "author": "Jochen Diekenbrock",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JochenDiekenbrock/Modularized-JSON-Schema/issues"
+  },
+  "homepage": "https://github.com/JochenDiekenbrock/Modularized-JSON-Schema#readme",
+  "dependencies": {
+    "json-schema-to-typescript": "^4.6.2"
+  }
+}
